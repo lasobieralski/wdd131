@@ -44,6 +44,20 @@ h2 {
     
 }
 
+.dark h2 {
+   color: #a0d4ed
+}
+
+.dark p {
+    background-color: #333;
+    color: white; 
+}
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
 p {
     text-align: left;
     width: 80%;
@@ -76,3 +90,4 @@ img {
     margin-top: 20px;
     
 }
+
