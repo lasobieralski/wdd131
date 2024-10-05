@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+ :root {
+ --primary-color: #52489c;
+ --secondary-color: #59c3c3;
+ --accent-color: #f45b69;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: Mooli, san-serif;
+ }
+
+html {
+   width: 100%;
+}
+
+body {
+   font-family: var(--primary-font);
+   font-size: 1.2em;
+
+}
+
+header {
+   background-color: var(--primary-color);
+   display:flex;
+   justify-content: space-between;
+   padding: 25px;
+   align-items: center;
+   color: white;
+   font-size: 40px;
+   padding-bottom: 0;
+   margin-bottom: 0;
+   border-bottom: 0;
+}
+
+h1 {
+   color: white;
+   font-size: 75px;
+   font-family: var(--secondary-font);
+   font-weight: lighter;
+}
+ 
+#menu {
+   background: none;
+   border: none;
+   padding: 0;
+   font-size: larger;
+   color: white;
+}
+
+nav {
+   padding: 30px;
+}
+nav ul {
+   list-style: none;
+   padding-left: 0;
+   margin: 0;
+   
+}
+nav ul.dropdown li a {
+   /*display: none;*/
+   text-align: center;
+   font-size: 30px;
+   padding: 25px;
+   color: white;
+}
+
+main {
+   background-color: var(--text-light);
+}
+
+h2 {
+   color: var(--text-dark);
+   font-size: 35px;
+   margin-top: 0;
+   text-align: center;
+   padding-top: 40px;
+   padding-bottom: 0;
+}
+
+.gallery {
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+   gap: 10px;
+   padding: 10px;
+}
+
+.gallery img {
+   width: 250px;
+   height: 250px;
+   border: 5px solid white;
+   box-sizing: border-box;
+   object-fit: cover;
+   
+}
+
+footer {
+   background-color: var(--primary-color);
+   color: white;
+   text-align: left;
+   padding-left: 50px;
+   
+   font-size: 1rem;
+}
+
+body, header, main {
+   margin: 0;
+}
+@media (max-width: 500px) {
+   .gallery {
+      grid-template-columns: 1fr;
+   }
+   header {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+   }
+   nav ul {
+      display: block;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+   }
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+   .gallery {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   nav ul {
+      display: none;
+   }
+}
+
+@media (min-width: 901px) {
+   .gallery {
+      grid-template-columns: repeat(3, 1fr);
+   }
+   header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   #menu {
+      display: none;
+   }
+   nav ul {
+      list-style: none;
+      padding:0px;
+      margin: 0;
+   }
+   nav ul.dropdown li {
+      display: inline-block;
+      margin: 10px 0;
+   }
+   nav ul.dropdown li a {
+      text-decoration: underline;
+      color: white;
+      padding-bottom: 0px;
+   }
+}
