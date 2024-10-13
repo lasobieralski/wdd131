@@ -102,6 +102,7 @@ h2 {
    border: 5px solid white;
    box-sizing: border-box;
    object-fit: cover;
+   align-items: center;
    
 }
 
