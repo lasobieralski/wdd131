@@ -1,0 +1,126 @@
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 400 to 700*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+.lora- {
+  font-family: "Lora", serif;
+  /*font-optical-sizing: none;*/
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+--primary-color: #EFC69B;
+--secondary-color: #af1b3f;
+--text-dark: #473144;
+--body-font: Helvetica, Arial, sans-serif;
+--headline-font: Lora, Impact, serif;
+}
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  background: #ff0;
+  color: #000;
+}
+.skiptocontent a:focus {
+  top: 0;
+}
+
+* {
+  margin: 8px;
+  padding: 0;
+}
+html {
+  width: 100%;
+}
+
+Body {
+  font-family: var(--body-font);
+  font-size: 1.2em;
+}
+
+h1 h2 {
+  font-family: var(--headline-font);
+}
+h1 {
+  text-align: center;
+}
+
+h2 {
+  color: var(--secondary-color);
+  font-size: 19px;
+}
+
+/* leave this alone this is the navigation tool bar code*/
+.main-nav {
+  display: grid;
+  grid-template-columns: 90px 90px 90px;
+  align-items: center;
+  justify-content: end;
+  justify-items: end;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+}
+
+#maincontent {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  justify-content: end;
+  justify-items: end;
+  
+}
+
+nav {
+  align-items: center;
+  padding: 0;
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  justify-content: end;
+  grid-auto-flow: column;
+}
+
+nav ul {
+  display: flex; /* Arranges items in a row */
+  list-style: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Link styles */
+nav ul li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 18px;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 200px 525px; /* Details column and content column */
+  /*gap: 20px;
+  padding: 20px 0;*/
+  /*border-bottom: 1px solid #ddd;*/
+  align-items: start;
+}
+
+/* Book details on the left */
+.book-details {
+  text-align: right;
+  font-size: 12px;
+  color: var(--text-dark);
+  /*border-right: 1px solid var(--primary-color);*/
+}
+
+.date {
+  font-size: 16px;
+}
+
+div p {
+  text-align: left;
+  padding-right:10px;
+}
+
+/*.dropdown {
+  border: 1px solid var(--primary-color);
+}*/
+
