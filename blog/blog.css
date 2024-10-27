@@ -1,75 +1,49 @@
-/* <uniquifier>: Use a unique and descriptive class name
-<weight>: Use a value from 400 to 700*/
+/* Font and Root Variables */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-.lora- {
-  font-family: "Lora", serif;
-  /*font-optical-sizing: none;*/
-  font-weight: 400;
-  font-style: normal;
-}
+
 :root {
---primary-color: #EFC69B;
---secondary-color: #af1b3f;
---text-dark: #473144;
---body-font: Helvetica, Arial, sans-serif;
---headline-font: Lora, Impact, serif;
-}
-.skiptocontent a {
-  position: absolute;
-  top: -40px;
-  background: #ff0;
-  color: #000;
-}
-.skiptocontent a:focus {
-  top: 0;
+  --primary-color: #EFC69B;
+  --secondary-color: #af1b3f;
+  --text-dark: #473144;
+  --body-font: Helvetica, Arial, sans-serif;
+  --headline-font: Lora, Impact, serif;
 }
 
 * {
-  margin: 8px;
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
-html {
-  width: 100%;
-}
 
-Body {
+body {
   font-family: var(--body-font);
   font-size: 1.2em;
+  line-height: 1.5;
+  color: var(--text-dark);
 }
 
-h1 h2 {
+h1, h2 {
   font-family: var(--headline-font);
 }
+
 h1 {
   text-align: center;
+  margin-top: 20px;
 }
 
 h2 {
   color: var(--secondary-color);
-  font-size: 19px;
+  font-size: 20px;
+  margin-top: 5px;
 }
 
-/* leave this alone this is the navigation tool bar code*/
-.main-nav {
-  display: grid;
-  grid-template-columns: 90px 90px 90px;
-  align-items: center;
-  justify-content: end;
-  justify-items: end;
-  padding-right: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  
+/* Header and Navigation */
+header {
+  padding: 15px;
+  /*border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);*/
+  text-align: center;
 }
-
-#maincontent {
-  display: grid;
-  grid-template-columns: 2fr 3fr 1fr;
-  justify-content: end;
-  justify-items: end;
-  
-}
-
 nav {
   align-items: center;
   padding: 0;
@@ -78,14 +52,20 @@ nav {
   justify-content: end;
   grid-auto-flow: column;
 }
-
+.main-nav {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  list-style: none;
+  margin-top: 10px;
+  padding: 5px 30px;
+}
 nav ul {
   display: flex; /* Arranges items in a row */
   list-style: none; /* Removes bullet points */
   padding: 0;
   margin: 0;
 }
-
 
 /* Link styles */
 nav ul li a {
@@ -94,33 +74,119 @@ nav ul li a {
   font-size: 18px;
 }
 
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 18px;
+}
+
+/* Main Content Layout */
+#maincontent {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Left content, right filters */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start; /* Aligns filter box to the top */
+}
+
+/* Container for Articles */
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Article Section */
 .article {
   display: grid;
-  grid-template-columns: 200px 525px; /* Details column and content column */
-  /*gap: 20px;
-  padding: 20px 0;*/
-  /*border-bottom: 1px solid #ddd;*/
-  align-items: start;
+  grid-template-columns: 150px 1fr; /* Two columns: book details and main content */
+  gap: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
 }
 
-/* Book details on the left */
 .book-details {
   text-align: right;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-dark);
-  /*border-right: 1px solid var(--primary-color);*/
 }
 
+.book-details p {
+  margin: 4px 0;
+}
+
+.article-content {
+  border-left: 2px solid var(--primary-color);
+  padding-left: 20px;
+}
+
+.article-content img {
+  max-width: 150px;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
+.dropdown {
+  border: 1px solid var(--primary-color);
+  height: 100%;
+  padding-top: 15px;
+  /*margin-top: 5px;*/
+  padding-bottom: 60%;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  gap: 10px;
+}
+
+
+/* Filter Sidebar */
+.filters {
+  /*border: 1px solid var(--primary-color);*/
+  /*margin: 20px 15px 15px 15px;*/
+  background-color: #fff;
+  /*width: 100%;*/
+  /*align-self: start;*/
+  display: block;
+  
+}
+
+.filters label {
+  /*display: block;
+  /*font-weight: bold;
+  color: var(--text-dark);
+  margin-top: 10px;*/
+  text-align: left;
+  font-weight: bold;
+  color: var(--text-dark);
+  padding-left: 10px;
+  padding-top: 10px;
+  /*margin-top: 10px;*/
+
+}
+
+.filters select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
 .date {
   font-size: 16px;
+  margin-bottom: 5px;
+  text-align: right;
 }
 
-div p {
-  text-align: left;
-  padding-right:10px;
+
+/* Skip to Content Link */
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  background: #ff0;
+  color: #000;
 }
 
-/*.dropdown {
-  border: 1px solid var(--primary-color);
-}*/
-
+.skiptocontent a:focus {
+  top: 0;
+}
