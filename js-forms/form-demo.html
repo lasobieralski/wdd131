@@ -1,0 +1,51 @@
+<!-- form-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="form-demo.css" />
+    <script src="form-demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+      <form id="checkout-form" action="completed.html" method="post">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="full-name" name="fullName" placeholder="Enter your full name here" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email here" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" placeholder="Enter your addres here"></textarea>
+
+        <label for="paymentType">Payment Type</label>
+        <select id="paymentType" name="paymentType" required>
+            <option value="" disabled selected>Select a payment type</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="PayPal">PayPal</option>
+        </select>
+        <div id="creditCardFields" class="hide">
+            <label for="cardNumber">Card Number</label>
+            <input type="password" id="cardNumber" name="cardNumber" placeholder="Enter your card number" pattern="[0-9]{16}" required>
+            
+            <label for="expiry">Expiration Date</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+            
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="cvv" placeholder="Enter CVV" required>
+        </div>
+
+        <div id="paypalFields" class="hide">
+            <label for="PayPalUsername"></label>PayPal Username</label>
+            <input type="text" id="PayPalUsername" name="PayPalUsername" placeholder="Enter your PayPalUsername">
+        </div>
+        <button type="submit">Place Order</button>
+      </form>
+    </main>
+  </body>
+</html>
