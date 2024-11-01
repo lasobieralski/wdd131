@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CreditCard</title>
     <link rel="stylesheet" href="creditcard.css">
     <link rel="icon" href="iconcreditcard.png" type="image">
@@ -28,47 +28,45 @@
               </span>
             </div>
             <!--- end card image container --->
-            <label for="card-number">
-                Card Number
-              </label>
-            <input type="text" id="card-number" placeholder="1234 5678 9101 1112" min="16">
+
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9101 1112" maxlength="16">
+
             <div id="cardholder-container">
               <label for="card-holder">Card Holder</label>
               <input type="text" id="card-holder" placeholder="e.g. John Doe" />
             </div>
             <!--- end card holder container --->
+
             <div id="exp-container">
-              <label for="card-exp">
-                  Expiration
-                </label>
-              <input id="card-month" type="text" placeholder="MM" length="2">
-              <input id="card-year" type="text" placeholder="YY" length="2">
+              <label for="card-exp">Expiration</label>
+              <input id="card-exp" type="text" placeholder="MM" maxlength="2">
+              <input id="card-year" type="text" placeholder="YY" maxlength="2">
             </div>
-                <div id="cvc-container">
+
+            <div id="cvc-container">
               <label for="card-cvc"> CVC/CVV</label>
-              <input id="card-cvc" placeholder="XXX-X" type="text" min-length="3" max-length="4">
+              <input id="card-cvc" placeholder="XXX-X" type="text" minlength="3" maxlength="4">
               <p>Last 3 or 4 digits</p>
             </div>
             <!--- end CVC container --->
-            <!--- end exp container --->
+
           </div>
           <!--- end card front --->
+
           <div id="card-back">
-            <div id="card-stripe">
-            </div>
-        
+            <div id="card-stripe"></div>
           </div>
           <!--- end card back --->
+
           <input type="text" id="card-token" />
           <button type="button" id="card-btn">Submit</button>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-          <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-          <script src="https://use.fontawesome.com/f1e0bf0cbc.js"></script>
+
+          
 
         </div>
         <!--- end form container --->
 
-        </div>
       </form>
     </main>
   </body>
