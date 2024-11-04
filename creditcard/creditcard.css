@@ -52,7 +52,7 @@ body {
 }
 
 #card-btn:hover {
-  background-color: rgb(55, 213, 134);
+  background-color: black;
 }
 
 #card-cvc {
@@ -214,7 +214,7 @@ input {
   border-radius: 4px;
   font-family: lato, 'helvetica-light', 'sans-serif';
   letter-spacing: .7px;
-  box-shadow: 2px 2px 2px 2px #a2a0a0);*/
+  box-shadow: 2px 2px 2px 2px #a2a0a0;
 }
 
 input::-webkit-input-placeholder {
@@ -230,8 +230,8 @@ input::-webkit-input-placeholder {
 input:-moz-placeholder {
   color: black;
   opacity: 0.7;
-  font-family: lato, 'helvetica-light', 'sans-serif'; 
-  letter-spacing: 1px;
+  font-family: lato, 'helvetica-light', 'sans-serif';
+  letter-spacing: 1px; 
   font-weight: 300;
   letter-spacing: 1px;
   font-size: 10px;
