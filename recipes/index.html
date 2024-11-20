@@ -29,7 +29,7 @@
       </div>
       <form action="search-results.html" method="get">
         <div class="container">
-          <input type="text" name="search" placeholder="Find a recipe" required>
+          <input id="search-bar" type="text" name="search" placeholder="Find a recipe" required>
             <button type="submit">
               <img src="images/search.svg" alt="search icon" class="icon">
             </button>
@@ -38,6 +38,11 @@
       <hr class="divider">
     </header>
     <main>
+      <div>
+        <button id="generateButton">Recipe Button</button>
+        <p id="result"></p>
+      </div>
+      <div id="search-results"></div>
         <section class="recipe-container">
           <img src="images/german-gooseberry-cake.jpg" alt="german-gooseberry-cake">
           <div class="content">

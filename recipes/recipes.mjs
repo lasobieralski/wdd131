@@ -282,3 +282,7 @@ const recipes = [
 ]
 
 export default recipes
+export function getRandomRecipe() {
+    const randomIndex = Math.floor(Math.random() * recipes.length);
+    return recipes[randomIndex];
+}

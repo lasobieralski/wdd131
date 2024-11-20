@@ -186,3 +186,22 @@ function searchList(list, query) {
   console.log(searchList(hikes, "yellowstone"));
   console.log(searchList(hikes, "moderate"));
   console.log(searchList(hikes, "al"));
+
+  //his corrected code:
+  // function searchList(list, query) {
+  //   //callback is responsible for checking each item in the list
+  //   //to see if it matches the query.
+  //   function searchCallback(item) {
+  //     return item.name.toLowerCase().includes(query.toLowerCase()) ||  
+  //       item.description.toLowerCase().includes(query.toLowerCase()) || 
+  //       item.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())); 
+        
+  //   }
+  //   const filtered = list.filter(searchCallback);
+
+  //   const sorted = filtered.sort((a, b) => a.distance > b.distance);
+  //   return sorted;
+  // }
+  // console.log(searchList(hikes, "yellowstone"));
+  // console.log(searchList(hikes, "moderate"));
+  // console.log(searchList(hikes, "al"));
