@@ -1,83 +1,121 @@
-// import recipes, {  getRandomRecipe } from './recipes.mjs';  // Import the recipes from the recipes.mjs file
+import recipes from './recipes.mjs'; // Import the recipes from recipes.mjs
 
-//  document.addEventListener("DOMContentLoaded", () => {
-//    const button = document.querySelector("#generateButton");
-//    const result = document.querySelector("#result");
+// Function to generate a random number between 0 and num-1
+function random(num) {
+    return Math.floor(Math.random() * num);
+}
 
-//   button.addEventListener("click", () => {
-    
-//     const randomIndex = getRandomRecipe();
-//     result.textContent = `Recipe: ${recipes[randomIndex].name}
-//   Ingredients: ${recipes[randomIndex].recipeIngredient}
-//   Instructions: ${recipes[randomIndex].recipeInstructions}
-//   Ratings:${recipes[randomIndex].rating}`;
-  
-//   })
-// })
-// // Example of how to display the recipes on the console
-// recipes.forEach(recipe => {
-//   console.log(`Recipe: ${recipe.name}`);
-//   console.log(`Ingredients: ${recipe.recipeIngredient}`);
-//   console.log(`Instructions: ${recipe.recipeInstructions}`);
-//   console.log(`Ratings:${recipe.rating}`);
-//   console.log('----------------------------------');
-// });
+// Function to get a random entry from an array
+function getRandomListEntry(list) {
+    if (!Array.isArray(list) || list.length === 0) {
+        throw new Error("The list is either not defined or empty.");
+    }
+    const randomNum = random(list.length); // Generate a random index
+    return list[randomNum]; // Return the random entry
+}
 
-import recipes, { getRandomRecipe } from './recipes.mjs'; 
+// Function to create star ratings
+function createStars(rating) {
+    const fullStars = '⭐'.repeat(Math.floor(rating));
+    const emptyStars = '☆'.repeat(5 - Math.floor(rating));
+    return fullStars + emptyStars;
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-    const button = document.querySelector("#generateButton");
-    const resultContainer = document.querySelector("#result");
+// Function to generate the recipe HTML template
+function recipeTemplate(recipe) {
+    return `
+        <figure class="recipe">
+            <img src="${recipe.image}" alt="Image of ${recipe.name}" />
+            <figcaption>
+                <ul class="recipe__tags">
+                    ${tagsTemplate(recipe.tags)}
+                </ul>
+                <h2><a href="#">${recipe.name}</a></h2>
+                <p class="recipe__ratings">
+                    ${ratingTemplate(recipe.rating)}
+                </p>
+                <p class="recipe__description">
+                    ${recipe.description}
+                </p>
+			</figcaption>
+        </figure>
+    `;
+}
 
-    button.addEventListener("click", () => {
-        const randomRecipe = getRandomRecipe(); // Fetch a random recipe
+// Function to generate tags HTML
+function tagsTemplate(tags) {
+    return tags.map(tag => `<li>${tag}</li>`).join('');
+}
 
-        // Clear previous content
-        resultContainer.innerHTML = '';
+// Function to generate the ratings HTML
+function ratingTemplate(rating) {
+    let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
+    for (let i = 1; i <= 5; i++) {
+        html += i <= Math.floor(rating)
+            ? `<span aria-hidden="true" class="icon-star">⭐</span>`
+            : `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+    }
+    html += `</span>`;
+    return html;
+}
 
-        // Dynamically create the recipe container
-        const recipeContainer = document.createElement('div');
-        recipeContainer.classList.add('recipe-container');
+// Function to render recipes to the DOM
+function renderRecipes(recipeList) {
+    const outputElement = document.querySelector("#result");
+    const recipeHTML = recipeList.map(recipe => recipeTemplate(recipe)).join('');
+    outputElement.innerHTML = recipeHTML;
+}
 
-        // Recipe Image
-        const recipeImage = document.createElement('img');
-        recipeImage.src = `${randomRecipe.image}`; // Assume each recipe has an `image` property
-        recipeImage.alt = randomRecipe.name;
+// Filter recipes based on a query string
+function filterRecipes(query) {
+    return recipes
+        .filter(recipe => {
+            return (
+                recipe.name.toLowerCase().includes(query) || // Check name
+                recipe.description.toLowerCase().includes(query) || // Check description
+                recipe.tags.find(tag => tag.toLowerCase().includes(query)) || // Check tags
+                recipe.recipeIngredient.find(ingredient => ingredient.toLowerCase().includes(query)) // Check ingredients
+            );
+        })
+        .sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically by name
+}
 
-        // Content Wrapper
-        const contentWrapper = document.createElement('div');
-        contentWrapper.classList.add('content');
+// Search handler for filtering recipes
+function searchHandler(event) {
+    event.preventDefault(); // Prevent the form from refreshing
 
-        // Recipe Tags
-        const tagContainer = document.createElement('div');
-        tagContainer.classList.add('tag-container');
-        //tagContainer.textContent = randomRecipe.tags.join(', '); // Assume tags are an array
+    // Get the search input and convert to lowercase
+    const searchInput = document.querySelector("#search-bar").value.toLowerCase();
 
-        // Recipe Title
-        const title = document.createElement('h2');
-        title.textContent = randomRecipe.name;
+    // Filter recipes based on the search query
+    const filteredRecipes = filterRecipes(searchInput);
 
-        // Recipe Rating
-        const rating = document.createElement('span');
-        rating.classList.add('rating');
-        rating.setAttribute('role', 'img');
-        rating.setAttribute('aria-label', `Rating: ${randomRecipe.rating} out of 5 stars`);
-        rating.innerHTML = '⭐'.repeat(randomRecipe.rating) + '☆'.repeat(5 - randomRecipe.rating);
+    // Render the filtered recipes
+    if (filteredRecipes.length === 0) {
+        document.querySelector("#result").innerHTML = `<p>No recipes found for "${searchInput}".</p>`;
+    } else {
+        renderRecipes(filteredRecipes);
+    }
+	document.querySelector("#search-bar").value = "";
+}
 
-        // Recipe Description
-        const description = document.createElement('p');
-        description.classList.add('description');
-        description.textContent = randomRecipe.description;
+// Initialize the app and set up event listeners
+function init() {
+    // Render a random recipe on page load
+    const randomRecipe = getRandomListEntry(recipes);
+    renderRecipes([randomRecipe]);
 
-        // Append all elements to their respective containers
-        contentWrapper.appendChild(tagContainer);
-        contentWrapper.appendChild(title);
-        contentWrapper.appendChild(rating);
-        contentWrapper.appendChild(description);
-        recipeContainer.appendChild(recipeImage);
-        recipeContainer.appendChild(contentWrapper);
-        resultContainer.appendChild(recipeContainer);
+    // Set up the search functionality
+    document.querySelector("form").addEventListener("submit", searchHandler);
+
+    // Set up the "Generate Random Recipe" button
+    const generateButton = document.querySelector("#generateButton");
+    generateButton.addEventListener("click", () => {
+        const randomRecipe = getRandomListEntry(recipes);
+        renderRecipes([randomRecipe]);
     });
-});
+}
 
+// Call init to start the app
+document.addEventListener("DOMContentLoaded", init);
 

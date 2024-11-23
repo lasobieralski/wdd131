@@ -279,10 +279,17 @@ const recipes = [
 		recipeYield: '12 servings',
 		rating: 4
 	}
-]
+];
 
 export default recipes
-export function getRandomRecipe() {
-    const randomIndex = Math.floor(Math.random() * recipes.length);
-    return recipes[randomIndex];
-}
+// export function getRandomRecipe() {
+//     const randomIndex = Math.floor(Math.random() * recipes.length);
+//     return recipes[randomIndex];
+// export function getRandomRecipe(recipes) {
+//     if (!Array.isArray(recipes) || recipes.length === 0) {
+//         throw new Error("The recipes array is either not defined or empty.");
+//     }
+
+//     const randomIndex = Math.floor(Math.random() * recipes.length);
+//     return recipes[randomIndex];
+// }

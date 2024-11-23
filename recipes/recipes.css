@@ -103,7 +103,9 @@ hr.divider {
 .recipe-container img { 
   width: 100%;
   height: auto;
-  padding-bottom: 20px;
+  object-fit: cover;
+  /*padding-bottom: 20px;*/
+  border-radius: 10px;
 }
 .recipe-container .rating {
   font-size: 20px;
@@ -158,6 +160,22 @@ footer .social img {
   height: auto;
   margin: 0;
 }
+.recipe__ingredients, .recipe__instructions {
+  margin: 10px 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.recipe__ingredients li, .recipe__instructions li {
+  margin: 5px 0;
+}
+
+.recipe__tags {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
 
 @media (min-width: 600px) {
   .recipe-container {
@@ -169,8 +187,10 @@ footer .social img {
 
   .recipe-container img {
     width: 50%; /* Use 50% width for larger screens */
-    height: auto;
+    max-height: 600px;
+    object-fit: contain;
     padding: 0; /* Remove padding */
+    border-radius: 10px;
   }
   /* Content container */
   .recipe-container .content {

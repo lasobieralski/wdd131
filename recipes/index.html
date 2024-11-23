@@ -9,7 +9,7 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="Gooseberry cake with vanilla cream and crumble">
     <meta property="og:image" content="images/german-gooseberry-cake.jpg">
-    <meta property="og:url" content="URL of the page">
+    <meta property="og:url" content="https://example.com"> <!-- Replace with your actual page URL -->
     <meta name="twitter:card" content="summary_large_image">
     <title>Recipe Book</title>
     <link rel="stylesheet" href="recipes.css">
@@ -27,12 +27,12 @@
         <img src="images/recipe-book.png" alt="Recipe Book Icon" class="logo">
         <h1>RECIPEBOOK</h1>
       </div>
-      <form action="search-results.html" method="get">
+      <form id="search-form">
         <div class="container">
           <input id="search-bar" type="text" name="search" placeholder="Find a recipe" required>
-            <button type="submit">
-              <img src="images/search.svg" alt="search icon" class="icon">
-            </button>
+          <button type="submit">
+            <img src="images/search.svg" alt="search icon" class="icon">
+          </button>
         </div>
       </form>
       <hr class="divider">
@@ -40,41 +40,23 @@
     <main>
       <div>
         <button id="generateButton">Recipe Button</button>
-        <p id="result"></p>
+        <div id="result"></div>
       </div>
-      <div id="search-results"></div>
-        <section class="recipe-container">
-          <img src="images/german-gooseberry-cake.jpg" alt="german-gooseberry-cake">
-          <div class="content">
-            <div class="tag-container">
-              <div class="tags">Dessert, German</div>
-            </div>
-            <h2>Gooseberry cake with vanilla cream and crumble</h2> 
-            <span class="rating" role="img" aria-label="Rating: 5 out of 5 stars">
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star-empty">⭐</span>
-              <!--<span aria-hidden="true" class="icon-star-empty">☆</span>-->
-            </span>
-              <p class="description">This gooseberry cake with crumble is easy to follow, 
-                  a bit tart and not too sweet. Made up of a cake base, filled with fresh 
-                  gooseberries and vanilla cream and finished off with crumble that's 
-                  flavored with vanilla. A must have recipe for gooseberry lovers!!</p>
-          </div>      
-        </section>
     </main>
     <footer>
       <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
       <div class="social">
-        <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
-        <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
-        <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
-        <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
+        <a href="#" aria-label="Visit Instagram">
+          <img src="images/instagram_icon.svg" alt="Instagram icon">
+        </a>
+        <a href="#" aria-label="Visit YouTube">
+          <img src="images/youtube_icon.svg" alt="YouTube icon">
+        </a>
+        <a href="#" aria-label="Visit Pinterest">
+          <img src="images/pinterest_icon.svg" alt="Pinterest icon">
+        </a>
       </div>
     </footer>
   </body>
-</html>
-
-
+  </html>
