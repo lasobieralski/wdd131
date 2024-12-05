@@ -1,0 +1,61 @@
+/*share recipe form*/
+/* Basic Form Styles */
+#share-form {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.form-container {
+    display: flex;
+    flex-direction: column; /* Stacks items in a column */
+    gap: 15px; /* Adds spacing between form elements */
+}
+  
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+  
+input, textarea, button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Full-width fields */
+    box-sizing: border-box; /* Includes padding and border in the element's width */
+}
+  
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+  
+button {
+    background: #5ba5ae;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+  
+button:hover {
+    background: #3bbace;
+}
+  
+/* Responsive Design (if needed) */
+@media (max-width: 600px) {
+#share-form {
+        padding: 15px;
+    }
+}
+  
+  

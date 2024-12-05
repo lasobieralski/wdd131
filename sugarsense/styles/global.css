@@ -1,0 +1,43 @@
+/* Global Variables */
+:root {
+    --primary-color: rgb(59, 75, 33);
+    --secondary-color: #788982;
+    --accent1-color: #92B594;
+    --accent2-color: rgb(0, 162, 255);
+    --accent3-color: rgb(240, 227, 211);
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "Amatic SC", cursive;
+    --third-font: Arial, Helvetica, sans-serif;
+    --fourth-font:"Roboto";
+}
+  
+/* Universal Styles */
+body {
+    font-family: var(--primary-font);
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    /*font-size: 1rem;
+    line-height: 1.6;*/
+    /*max-width: 1200px;
+    align-items: center;
+    justify-content: center;*/
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Centered Container */    
+.content {
+    max-width: 1200px;         /* Maximum width for the page */
+    margin: 0 auto;            /* Center the container horizontally */
+    padding: 20px;             /* Add padding inside the container */
+}
+/** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  

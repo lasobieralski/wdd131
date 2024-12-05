@@ -1,0 +1,67 @@
+.features  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Single column by default (small screens) */
+    gap: 20px; /* Space between cards */
+    margin: 0;
+    padding: 0;
+    max-width: 1200px; /* Constrain the section width */
+    
+  }
+ 
+.card {
+    border: 3px solid var(--primary-color);
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;        /* Stack content vertically */
+    justify-content: space-between; /* Space items inside the card */
+    min-height: 350px; /* Consistent height for all cards */
+}
+  
+  
+#vision p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.card-image {
+    width: 150px;             /* Set width for logo-like size */
+    height: auto;            /* Set height for logo-like size */
+    object-fit: contain;     /* Ensure the image fits inside without distortion */
+    border-radius: 10px;     /* Optional: round the corners for a uniform look */
+    margin: 10px auto;       /* Center the image and add spacing */
+}
+  
+.card-content  {
+    padding: 15px;
+    
+    /*flex-grow: 1;*/           /* Allow text to stretch */
+}
+  
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+  
+.card-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+.features {
+    grid-template-columns: 1fr; /* Single column */
+}
+@media (min-width: 600px) {
+    .features {
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+@media (min-width: 1024px) {
+    .features {
+      grid-template-columns: repeat(3, 1fr); /* Three columns */
+      gap: 30px; /* Increase spacing for larger screens */
+    }
+}
+        

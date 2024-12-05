@@ -21,26 +21,28 @@ const transporter = nodemailer.createTransport({
 });
 
 // Route to handle form submission
-app.post('/send', async (req, res) => {
+// Route for handling form submission
+app.post('/send', (req, res) => {
     const { name, email, subject, message } = req.body;
 
     const mailOptions = {
-        from: email, // Sender's email (user input)
-        to: process.env.EMAIL, // Your email address
-        subject: `New message from ${name}: ${subject}`,
-        text: `You received a new message from ${name} (${email}):\n\n${message}`
+        from: email,
+        to: process.env.EMAIL,
+        subject: `Contact Form: ${subject}`,
+        text: `Message from ${name} (${email}):\n\n${message}`
     };
 
-    try {
-        await transporter.sendMail(mailOptions);
-        res.status(200).send('Email sent successfully!');
-    } catch (error) {
-        console.error('Error sending email:', error);
-        res.status(500).send('Failed to send email.');
-    }
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error('Error sending email:', error);
+            return res.status(500).send('Error sending message.');
+        }
+        console.log('Email sent:', info.response);
+        res.status(200).send('Message sent successfully.');
+    });
 });
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });

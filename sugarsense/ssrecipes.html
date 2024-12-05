@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+  <meta name="author" content="Lisaann Sobieralski">
   <meta name="description" content="SugarSense - Your guide to healthier living">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
@@ -15,6 +16,10 @@
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/pages/home.css">
   <link rel="stylesheet" href="styles/components/cards.css">
+  <link rel="stylesheet" href="styles/ssrecipe.css">
+
+  <!--js files-->
+  <script type="module" src="ssmain.js"></script>
 </head>
 <body>
   <div class="content">
@@ -22,31 +27,44 @@
     <header>
       <div class="logo-name">
         <img src="images/newlogo6b.jpg" alt="SugarSense Logo" class="logo">
-        <h1>Tracking/Resources</h1>
+        <h1>Recipes</h1>
       </div>
       <nav class="navigation-container">
         <ul class="navigation">
           <li><a href="ssindex.html">Home</a></li>
-          <li><a href="ssrecipes.html">Recipes</a></li>
           <li><a href="sharerecipes.html">Share Recipes</a></li>
+          <li><a href="tracking.html">Tracking and Resources</a></li>
         </ul>
       </nav>
     </header>
-
-    <!-- Tracking information and Resources -->
+    <!-- page introduction -->
     
-    </header>
-    <footer>
-        <p>SugarSense &copy; 2024 - Lisaann Sobieralski</p>
-        <p><a href="site-plan.html">Site Plan</a></p>
-        <p><a href="contactme.html">Contact Us</a></p>
-        <div class="social">
-          
-            <img src="images/facebook.png" alt="fb icon">
-          </a>
+      <form id="search-form">
+        <div class="container">
+          <input id="search-bar" type="text" name="search" placeholder="Search for a recipe" required>
+          <button type="submit">
+            <img src="images/search.svg" alt="search icon" class="icon">
+          </button>
         </div>
-      </footer>
+      </form>
+      <hr class="divider">
+    </header>
+    <main>
+      <div>
+        <button id="generateButton">Random Recipe</button>
+      </div>  
+      <div id="recipe-list" class="recipe-list">
+      <!-- Recipes will be dynamically inserted here -->
     </div>
-  </body>
-  
-  </html>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 SugarSense - Lisaann Sobieralski</p>
+    <p><a href="site-plan.html">Site Plan</a></p>
+    <p><a href="contactme.html">Contact Us</a></p>
+    <div class="social">
+      <img src="images/facebook.png" alt="Facebook Icon">
+    </div>
+  </footer>
+</body>
+</html>

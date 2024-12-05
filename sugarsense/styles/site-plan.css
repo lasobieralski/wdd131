@@ -4,10 +4,34 @@ Any spaces in your font name should be replaced with a +.
 Fonts are separated by a | */
 /*@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap");
+@font-face {
+  font-family: 'Amatic SC';
+  src: url('fonts/AmaticSC-Regular.woff2') format('woff2'),
+       url('fonts/AmaticSC-Regular.woff') format('woff');
+  font-display: swap; /* Ensures text is displayed using fallback fonts until the custom font loads */
+}
+.amatic-sc-regular {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.element {
+  transition: transform 0.3s ease;
+}
+.amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
+body { 
+  text-align: left; 
+  font-family: Arial, sans-serif; 
+  font-size: 20px; 
+}
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #528E60;
+  --primary-color: #788982;
   --secondary-color: #5BA5AE;
   --accent1-color: #92B594;
   --accent2-color: #ADE2EB;
@@ -18,7 +42,7 @@ Fonts are separated by a | */
   /* change the values below to your chosen font(s) */
   --heading-font: "Poppins", sans-serif;
   h4 {
-    color: var(--accent4-color);
+    color: black;
   }
   --paragraph-font: "Roboto", sans-serif;
 
@@ -26,7 +50,7 @@ Fonts are separated by a | */
   --headline-color-on-white: var(
     --primary-color
   ); /* headlines on a white background */
-  --headline-color-on-color: white; /* headlines on a colored background */
+  --headline-color-on-color: black; /* headlines on a colored background */
   --paragraph-color-on-white: black;
    /* paragraph text on a white background */
   --paragraph-color-on-color: black; /* paragraph text on a colored background */
@@ -35,6 +59,10 @@ Fonts are separated by a | */
   --nav-background-color: var(--accent1-color);
   --nav-hover-link-color: white;
   --nav-hover-background-color: var(--accent3-color);
+}
+img {
+  border: 3px solid rgb(59, 75, 33);
+  border-radius: 10px;
 }
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
