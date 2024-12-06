@@ -5,9 +5,9 @@
   <meta name="description" content="SugarSense - Your guide to healthier living">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <title>SugarSense</title>
+  <title>SugarSense - Recipes</title>
 
-  <!-- Import Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 
@@ -17,9 +17,6 @@
   <link rel="stylesheet" href="styles/pages/home.css">
   <link rel="stylesheet" href="styles/components/cards.css">
   <link rel="stylesheet" href="styles/ssrecipe.css">
-
-  <!--js files-->
-  <script type="module" src="ssmain.js"></script>
 </head>
 <body>
   <div class="content">
@@ -37,8 +34,8 @@
         </ul>
       </nav>
     </header>
-    <!-- page introduction -->
-    
+
+    <main>
       <form id="search-form">
         <div class="container">
           <input id="search-bar" type="text" name="search" placeholder="Search for a recipe" required>
@@ -48,23 +45,27 @@
         </div>
       </form>
       <hr class="divider">
-    </header>
-    <main>
+      
       <div>
         <button id="generateButton">Random Recipe</button>
-      </div>  
+      </div>
+      
       <div id="recipe-list" class="recipe-list">
-      <!-- Recipes will be dynamically inserted here -->
-    </div>
-  </main>
+        <!-- Recipes will be dynamically inserted here -->
+      </div>
+    </main>
 
-  <footer>
-    <p>&copy; 2024 SugarSense - Lisaann Sobieralski</p>
-    <p><a href="site-plan.html">Site Plan</a></p>
-    <p><a href="contactme.html">Contact Us</a></p>
-    <div class="social">
-      <img src="images/facebook.png" alt="Facebook Icon">
-    </div>
-  </footer>
+    <footer>
+      <p>&copy; 2024 SugarSense - Lisaann Sobieralski</p>
+      <p><a href="site-plan.html">Site Plan</a></p>
+      <p><a href="contactme.html">Contact Us</a></p>
+      <div class="social">
+        <img src="images/facebook.png" alt="Facebook Icon">
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script type="module" src="ssrecipes.js"></script>
 </body>
 </html>
