@@ -1,12 +1,12 @@
 const recipes = [
 	{
-		Source: [
+		Author: [
 			"The Mormon Diet by Earl F. Updike",
 			"A Word of Wisdom",
 			"14 Days to New Vigor and Health"
 		],
 		name: "Hot Mixed Cereal",
-		tags: "Cereal, Breakfast",
+		tags: ["Cereal, Breakfast"],
 		//image: './images/sweet-potato-waffle-md.jpg',
 		servings: "1",
 		prepTime: "2 minutes",
@@ -28,13 +28,13 @@ const recipes = [
 
 	},
 	{
-		Source: [
+		Author: [
 			"The Mormon Diet by Earl F. Updike",
 			"A Word of Wisdom",
 			"14 Days to New Vigor and Health"
 			],
 		name: "Hash Brown Potatoes",
-		tags: "Potatoes, Breakfast",
+		tags: ["Potatoes, Breakfast"],
 		//image:
 		servings: "1 (eat all you want)",
 		prepTime: "3 minute",
@@ -55,13 +55,13 @@ const recipes = [
 		]
 	},
 	{
-		Source: [
+		Author: [
 			"The Mormon Diet by Earl F. Updike",
 			"A Word of Wisdom",
 			"14 Days to New Vigor and Health"
 		],
 		name: ": Apple Pie Waffles or Pancakes",
-		tags: "Waffles, Pancakes, Breakfast",
+		tags: ["Waffles, Pancakes, Breakfast"],
 		//image:
 		servings: "makes 14 pancakes or 4 waffles",
 		prepTime: "30 minutes",
@@ -97,13 +97,13 @@ const recipes = [
 		]
 	},
 	{
-		Source: [
+		Author: [
 			"The Mormon Diet by Earl F. Updike",
 			"A Word of Wisdom",
 			"14 Days to New Vigor and Health"
 		],
 		name: "Quick Oatmeal",
-		tags: "Oatmeal, Breakfast",
+		tags: ["Oatmeal, Breakfast"],
 		image: "/.images/oatmeal.jpg",
 		servings: "1",
 		prepTime: "2 minutes",
@@ -124,13 +124,13 @@ const recipes = [
 		],
 	},
 	{
-		Source: [
+		Author: [
 			"The Mormon Diet by Earl F. Updike",
 			"A Word of Wisdom",
 			"14 Days to New Vigor and Health"
 		],
 		name: "Cold or Hot Rice—Cereal—Fruit Combo",
-		tags: "Cereal, Rice, Breakfast",
+		tags: ["Cereal, Rice, Breakfast"],
 		//image:
 		servings: "1",
 		prepTime: "2-8 minutes",
@@ -151,13 +151,13 @@ const recipes = [
 		]
 	},
 	{
-		Source: [
+		Author: [
 			"The Mormon Diet by Earl F. Updike",
 			"A Word of Wisdom",
 			"14 Days to New Vigor and Health"
 		],
 		name: "Cold Cereal",
-		tags: "Cereal, Breakfast",
+		tags: ["Cereal, Breakfast"],
 		image: "./images/grapenuts.jpeg",
 		servings: "1",
 		prepTime: "2 minutes",
@@ -177,13 +177,13 @@ const recipes = [
 		]
 	},
 	{
-		Source: [
+		Author: [
 			"The Mormon Diet by Earl F. Updike",
 			"A Word of Wisdom",
 			"14 Days to New Vigor and Health"
 		],
 		name: "Wheatena Whole Wheat Hot Cereal",
-		tags: "Cereal, Whole Wheat, Breakfast",
+		tags: ["Cereal, Whole Wheat, Breakfast"],
 		//image:
 		servings: "1",
 		prepTime: "1 minute",
@@ -203,11 +203,11 @@ const recipes = [
 		]
 	},
 	{
-		Source: [
-				todaysmama.com/food/slow-cooker-cracked-wheat-recipe
+		Author: [
+			todaysmama.com/food/slow-cooker-cracked-wheat-recipe
 		],
 		name: "Slow Cooker Cracked Wheat Cereal",
-		tags: "Cereal, Whole Wheat, Breakfast",
+		tags: ["Cereal, Whole Wheat, Breakfast"],
 		image:"./images/crackedwheatcereal.jpg",
 		servings: "4 -- 1/2 cup serving size",
 		prepTime: "",
@@ -228,45 +228,69 @@ const recipes = [
 			"If you prefer a firmer cereal, reduce the cooking time to 7-8 hours. I like my cereal soft but still squeky to chew."
 		]
 	},
+	{
+		Author: [
+			"Lisaann Sobieralski",
+		],
+		name: "Turkey Vegetable Soup",
+		tags: ["Soup, Turkey, Vegetable, Lunch, Dinner"],
+		image: "./image/turkeyvegsoup.jpg",
+		servings: "8-10",
+		prepTime: "15 minutes",
+		cookTime: "slow cooker 4-8 hours depending on level",
+		ingredients: [
+			"half gallon jar of soup base broth(8 cups)",
+			"4-5 potatoes (I used yellow and white potatoes",
+			"5-6 sliced carrots",
+			"1 bunch of celery chopped",
+			"2 yellow onions diced",
+			"2 cups of turkey cut up"
+		],
+		note: "I used the drippings from my cooked turkey and made some gravy to use as my broth.",
+		directions: [
+			"Place all ingredients into slow cooker and cook to desired doneness."
+				
+		]
+	},
+	{
+		Author: [
+			"Lisaann Sobieralski",
+		],
+		name: "Tuna Pita",
+		tags: ["Lunch, Tuna, Sandwich"],
+		image: "./image/pitatunasalad.jpg",
+		servings: "5-6",
+		prepTime: "5-10 minutes",
+		cookTime: "none",
+		ingredients: [
+			"1 can tuna drained",
+			"3/4 cup miracle whip salad dressing (mayo, sourcream, plain greek yogurt, or sauce of choice)",
+			"1/2 whole dill pickle diced",
+			"1/4 onion diced",
+			"2 boiled eggs diced",
+			"1/2 cup of grapes sliced or diced",
+			"alfalfa sprouts (optional)",
+			"brocoli slaw (optional)",
+			"whole wheat pita bread"
+		],
+		note: "I use tuna packed in water",
+		directions: [
+			"Mix all ingredients into a bowl.",
+			"Place about 1/2 cup mixed salad in pita pocket."
+		]
+	},
 ];
 
 export default recipes;
-	// 
+	
 	// {
-	// 	Source: [
+	// 	Author: [
 	// 		"The Mormon Diet by Earl F. Updike",
 	// 		"A Word of Wisdom",
 	// 		"14 Days to New Vigor and Health"
 	// 	],
 	// 	name: "",
-	// 	tags: "",
-	// 	//image:
-	// 	servings: "",
-	// 	prepTime: "",
-	// 	cookTime: "",
-	// 	ingredients: [
-	// 		"",
-	// 		"",
-	// 		""
-	// 	],
-	// 	note: "",
-	// 	directions: [
-	// 		"",
-	// 		"",
-	// 		"",
-	// 		"",
-	// 		"",
-	// 		""
-	// 	]
-	// },
-// {
-	// 	Source: [
-	// 		"The Mormon Diet by Earl F. Updike",
-	// 		"A Word of Wisdom",
-	// 		"14 Days to New Vigor and Health"
-	// 	],
-	// 	name: "",
-	// 	tags: "",
+	// 	tags: [""],
 	// 	//image:
 	// 	servings: "",
 	// 	prepTime: "",
@@ -287,13 +311,13 @@ export default recipes;
 	// 	]
 	// },
 	// {
-	// 	Source: [
+	// 	Author: [
 	// 		"The Mormon Diet by Earl F. Updike",
 	// 		"A Word of Wisdom",
 	// 		"14 Days to New Vigor and Health"
 	// 	],
 	// 	name: "",
-	// 	tags: "",
+	// 	tags: [""],
 	// 	//image:
 	// 	servings: "",
 	// 	prepTime: "",
@@ -314,40 +338,13 @@ export default recipes;
 	// 	]
 	// },
 	// {
-	// 	Source: [
+	// 	Author: [
 	// 		"The Mormon Diet by Earl F. Updike",
 	// 		"A Word of Wisdom",
 	// 		"14 Days to New Vigor and Health"
 	// 	],
 	// 	name: "",
-	// 	tags: "",
-	// 	//image:
-	// 	servings: "",
-	// 	prepTime: "",
-	// 	cookTime: "",
-	// 	ingredients: [
-	// 		"",
-	// 		"",
-	// 		""
-	// 	],
-	// 	note: "",
-	// 	directions: [
-	// 		"",
-	// 		"",
-	// 		"",
-	// 		"",
-	// 		"",
-	// 		""
-	// 	]
-	// },
-	// {
-	// 	Source: [
-	// 		"The Mormon Diet by Earl F. Updike",
-	// 		"A Word of Wisdom",
-	// 		"14 Days to New Vigor and Health"
-	// 	],
-	// 	name: "",
-	// 	tags: "",
+	// 	tags: [""],
 	// 	//image:
 	// 	servings: "",
 	// 	prepTime: "",

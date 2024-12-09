@@ -30,12 +30,12 @@ function tagsTemplate(tags) {
 function recipeTemplate(recipe) {
     return `
         <figure class="recipe">
-            ${recipe.image ? `<img src="${recipe.image}" alt="Image of ${recipe.name}" />` : ''}
+            <img src="${recipe.image}" alt="Image of ${recipe.name}" />
             <figcaption>
                 <ul class="recipe__tags">
                     ${tagsTemplate(recipe.tags)}
                 </ul>
-                <h2>${recipe.name}</h2>
+                <h2><a href="#">${recipe.name}</a></h2>
                 <p><strong>Servings:</strong> ${recipe.servings}</p>
                 <p><strong>Prep Time:</strong> ${recipe.prepTime}</p>
                 <p><strong>Cook Time:</strong> ${recipe.cookTime}</p>
@@ -99,11 +99,11 @@ function init() {
     document.querySelector("#search-form").addEventListener("submit", searchHandler);
 
     // Set up the "Generate Random Recipe" button
-    const generateButton = document.querySelector("#generateButton");
-    generateButton.addEventListener("click", () => {
-        const randomRecipe = getRandomListEntry(recipes);
-        renderRecipes([randomRecipe]);
-    });
+    // const generateButton = document.querySelector("#generateButton");
+    // generateButton.addEventListener("click", () => {
+    //     const randomRecipe = getRandomListEntry(recipes);
+    //     renderRecipes([randomRecipe]);
+    // });
 }
 
 document.addEventListener("DOMContentLoaded", init);

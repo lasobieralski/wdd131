@@ -1,5 +1,8 @@
 /*share recipe form*/
 /* Basic Form Styles */
+p {
+    text-align: center;
+}
 #share-form {
     max-width: 600px;
     margin: 0 auto;
