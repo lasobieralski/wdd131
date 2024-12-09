@@ -1,3 +1,4 @@
+//ssrecipe.mjs page
 const recipes = [
 	{
 		Author: [
@@ -204,7 +205,7 @@ const recipes = [
 	},
 	{
 		Author: [
-			todaysmama.com/food/slow-cooker-cracked-wheat-recipe
+			"todaysmama.com/food/slow-cooker-cracked-wheat-recipe"
 		],
 		name: "Slow Cooker Cracked Wheat Cereal",
 		tags: ["Cereal, Whole Wheat, Breakfast"],

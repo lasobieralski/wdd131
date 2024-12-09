@@ -31,18 +31,22 @@ body {
 }
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #788982;
-  --secondary-color: #5BA5AE;
+  --primary-color: rgb(59, 75, 33);
+  --secondary-color: #788982;
   --accent1-color: #92B594;
-  --accent2-color: #ADE2EB;
-  --accent3-color: #3BBACE;
+  --accent2-color: rgb(0, 162, 255);
+  --accent3-color: rgb(240, 227, 211);
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Amatic SC", cursive;
+  --third-font: Arial, Helvetica, sans-serif;
+  --fourth-font:"Roboto";
   
 
 
   /* change the values below to your chosen font(s) */
   --heading-font: "Poppins", sans-serif;
   h4 {
-    color: black;
+    color: var(black);
   }
   --paragraph-font: "Roboto", sans-serif;
 
@@ -50,15 +54,15 @@ body {
   --headline-color-on-white: var(
     --primary-color
   ); /* headlines on a white background */
-  --headline-color-on-color: black; /* headlines on a colored background */
+  --headline-color-on-color: var(--accent3-color); /* headlines on a colored background */
   --paragraph-color-on-white: black;
    /* paragraph text on a white background */
-  --paragraph-color-on-color: black; /* paragraph text on a colored background */
+  --paragraph-color-on-color: var(--accent3-color); /* paragraph text on a colored background */
   --paragraph-background-color: var(--primary-color);
   --nav-link-color: black;
   --nav-background-color: var(--accent1-color);
   --nav-hover-link-color: white;
-  --nav-hover-background-color: var(--accent3-color);
+  --nav-hover-background-color: var(--accent2-color);
 }
 img {
   border: 3px solid rgb(59, 75, 33);

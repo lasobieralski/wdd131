@@ -1,3 +1,4 @@
+//ssrecipes.js page
 import recipes from './ssrecipe.mjs';
 
 // Convert tags from string to array for easier handling
@@ -30,26 +31,31 @@ function tagsTemplate(tags) {
 function recipeTemplate(recipe) {
     return `
         <figure class="recipe">
-            <img src="${recipe.image}" alt="Image of ${recipe.name}" />
-            <figcaption>
-                <ul class="recipe__tags">
-                    ${tagsTemplate(recipe.tags)}
-                </ul>
-                <h2><a href="#">${recipe.name}</a></h2>
-                <p><strong>Servings:</strong> ${recipe.servings}</p>
-                <p><strong>Prep Time:</strong> ${recipe.prepTime}</p>
-                <p><strong>Cook Time:</strong> ${recipe.cookTime}</p>
-                <p><strong>Ingredients:</strong></p>
-                <ul>
-                    ${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}
-                </ul>
-                ${recipe.note ? `<p><strong>Note:</strong> ${recipe.note}</p>` : ''}
-                <p><strong>Directions:</strong></p>
-                <ol>
-                    ${recipe.directions.map(step => `<li>${step}</li>`).join('')}
-                </ol>
-            </figcaption>
-        </figure>
+  <div class="recipe-container">
+    <div class="recipe-image">
+      <img src="${recipe.image}" alt="Image of ${recipe.name}" />
+    </div>
+    <div class="recipe-details">
+      <ul class="recipe__tags">
+        ${tagsTemplate(recipe.tags)}
+      </ul>
+      <h2>${recipe.name}</h2>
+      <p><strong>Servings:</strong> ${recipe.servings}</p>
+      <p><strong>Prep Time:</strong> ${recipe.prepTime}</p>
+      <p><strong>Cook Time:</strong> ${recipe.cookTime}</p>
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+          ${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+      </ul>
+      ${recipe.note ? `<p><strong>Note:</strong> ${recipe.note}</p>` : ''}
+      <p><strong>Directions:</strong></p>
+      <ol>
+          ${recipe.directions.map(step => `<li>${step}</li>`).join('')}
+      </ol>
+    </div>
+  </div>
+</figure>
+
     `;
 }
 
