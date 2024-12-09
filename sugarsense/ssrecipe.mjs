@@ -33,22 +33,24 @@ const recipes = [
 			"A Word of Wisdom",
 			"14 Days to New Vigor and Health"
 			],
-		name: "Frozen Hash—Brown Potatoes",
+		name: "Hash Brown Potatoes",
 		tags: "Potatoes, Breakfast",
 		//image:
 		servings: "1 (eat all you want)",
-		prepTime: "1 minute",
+		prepTime: "3 minute",
 		cookTime: "25 minutes",
 		ingredients: [
-			"1 package frozen hash-brown potatoes (choose a brand with no added oil)",
+			"1-2 fresh potatoes",
 			"½ cup chopped onion",
-			"1/8 teaspoon Mrs. Dash",
+			"1/8 teaspoon Mrs. Dash (optional)",
+			"1 garlic clove crushed",
 			"pepper to taste"
 		],
-		note: "",
+		note: "You can add herbs of choice for flavoring.",
 		directions: [
-			"Cook in a nonstick skillet over medium heat for 15 minutes",
-			"turn and cook for 10 minutes on the other side, until browned.",
+			"Wash and grate potatoes.",
+			"Cook in a nonstick skillet over medium heat for 6 minutes",
+			"turn and cook for 6-10 minutes on the other side, until browned.",
 			"Garnish with ketchup or other sauce (no-oil)."
 		]
 	},
@@ -102,7 +104,7 @@ const recipes = [
 		],
 		name: "Quick Oatmeal",
 		tags: "Oatmeal, Breakfast",
-		//image:
+		image: "/.images/oatmeal.jpg",
 		servings: "1",
 		prepTime: "2 minutes",
 		cookTime: "5 minutes",
@@ -156,7 +158,7 @@ const recipes = [
 		],
 		name: "Cold Cereal",
 		tags: "Cereal, Breakfast",
-		//image:
+		image: "./images/grapenuts.jpeg",
 		servings: "1",
 		prepTime: "2 minutes",
 		cookTime: "none",
@@ -166,7 +168,7 @@ const recipes = [
 			"½ banana",
 			"¼ cup strawberries (optional)"
 		],
-		note: "",
+		note: "I like mine with fresh blueberries and unsweetened Almond Milk",
 		directions: [
 			"Pour the cereal into a bowl.",
 			"Add the juice.",
@@ -200,9 +202,117 @@ const recipes = [
 			"(I like fresh raspberries.)"
 		]
 	},
+	{
+		Source: [
+				todaysmama.com/food/slow-cooker-cracked-wheat-recipe
+		],
+		name: "Slow Cooker Cracked Wheat Cereal",
+		tags: "Cereal, Whole Wheat, Breakfast",
+		image:"./images/crackedwheatcereal.jpg",
+		servings: "4 -- 1/2 cup serving size",
+		prepTime: "",
+		cookTime: "",
+		ingredients: [
+			"white wheat berries (uncooked wheat grain)",
+			"water",
+			"pinch of salt (optional)"
+		],
+		note: "Toppings you can add milk brown sugar, honey, raisins, yogurt, fruit (I add fresh berries and plain greek yogurt).",
+		directions: [
+			"Plan your meal using a 1/2 cup cooked wheat as your serving size.",
+			"Similar to rice, 1 cup of uncooked wheat will yield 4, 1/2-cup servings.",
+			"Typlical water to wheat ratio is 3 to 1. For 4 servings, add 1 cup raw wheat to 3 cups of water in a slow cooker.",
+			"Add a pinch of salt and cover.",
+			"Cook on low for up 8-10 hours or overnight.",
+			"Cereal will have puffed up and absorbed the majority ofthe water and cracked open to reveal buffy white insides of the wheat.",
+			"If you prefer a firmer cereal, reduce the cooking time to 7-8 hours. I like my cereal soft but still squeky to chew."
+		]
+	},
 ];
 
 export default recipes;
+	// 
+	// {
+	// 	Source: [
+	// 		"The Mormon Diet by Earl F. Updike",
+	// 		"A Word of Wisdom",
+	// 		"14 Days to New Vigor and Health"
+	// 	],
+	// 	name: "",
+	// 	tags: "",
+	// 	//image:
+	// 	servings: "",
+	// 	prepTime: "",
+	// 	cookTime: "",
+	// 	ingredients: [
+	// 		"",
+	// 		"",
+	// 		""
+	// 	],
+	// 	note: "",
+	// 	directions: [
+	// 		"",
+	// 		"",
+	// 		"",
+	// 		"",
+	// 		"",
+	// 		""
+	// 	]
+	// },
+// {
+	// 	Source: [
+	// 		"The Mormon Diet by Earl F. Updike",
+	// 		"A Word of Wisdom",
+	// 		"14 Days to New Vigor and Health"
+	// 	],
+	// 	name: "",
+	// 	tags: "",
+	// 	//image:
+	// 	servings: "",
+	// 	prepTime: "",
+	// 	cookTime: "",
+	// 	ingredients: [
+	// 		"",
+	// 		"",
+	// 		""
+	// 	],
+	// 	note: "",
+	// 	directions: [
+	// 		"",
+	// 		"",
+	// 		"",
+	// 		"",
+	// 		"",
+	// 		""
+	// 	]
+	// },
+	// {
+	// 	Source: [
+	// 		"The Mormon Diet by Earl F. Updike",
+	// 		"A Word of Wisdom",
+	// 		"14 Days to New Vigor and Health"
+	// 	],
+	// 	name: "",
+	// 	tags: "",
+	// 	//image:
+	// 	servings: "",
+	// 	prepTime: "",
+	// 	cookTime: "",
+	// 	ingredients: [
+	// 		"",
+	// 		"",
+	// 		""
+	// 	],
+	// 	note: "",
+	// 	directions: [
+	// 		"",
+	// 		"",
+	// 		"",
+	// 		"",
+	// 		"",
+	// 		""
+	// 	]
+	// },
 	// {
 	// 	Source: [
 	// 		"The Mormon Diet by Earl F. Updike",
