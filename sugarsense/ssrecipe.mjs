@@ -205,7 +205,7 @@ const recipes = [
 	},
 	{
 		Author: [
-			"todaysmama.com/food/slow-cooker-cracked-wheat-recipe"
+			"Amy Allen Johnson"
 		],
 		name: "Slow Cooker Cracked Wheat Cereal",
 		tags: ["Cereal, Whole Wheat, Breakfast"],
