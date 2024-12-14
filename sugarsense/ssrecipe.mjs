@@ -36,7 +36,7 @@ const recipes = [
 			],
 		name: "Hash Brown Potatoes",
 		tags: ["Potatoes, Breakfast"],
-		//image:
+		image: "./images/hasbrowns.jpg",
 		servings: "1 (eat all you want)",
 		prepTime: "3 minute",
 		cookTime: "25 minutes",
@@ -280,62 +280,281 @@ const recipes = [
 			"Place about 1/2 cup mixed salad in pita pocket."
 		]
 	},
+	{
+		Author: [
+			"The Mormon Diet by Earl F. Updike",
+			"A Word of Wisdom",
+			"14 Days to New Vigor and Health"
+		],
+		name: "Lettuce, Tomato, Onion, and Cucumber Sandwich",
+		tags: ["Lunch, Sandwich"],
+		//image:
+		servings: "1",
+		prepTime: "",
+		cookTime: "none",
+		ingredients: [
+			"2 slices whole wheat bread",
+			"1 sliced tomato",
+			"1 sliced onion",
+			"black pepper, Mrs. Dash",
+			"lettuce leaves",
+			"sliced cucumbers",
+			"dressing (oil-free and low-sodium)",
+			"sliced pickles (optional)"
+		],
+		note: "",
+		directions: [
+			"Toast bread if desired.",
+			"Spread dressing on bread.",
+			"Layer tomatoes, onion, cucumbers on one slice of bread.",
+			"Cover with lettuce.",
+			"Spice with a little Dijon mustard if desired.",
+			""
+		]
+	},
+	{
+		Author: [
+			"The Mormon Diet by Earl F. Updike",
+			"A Word of Wisdom",
+			"14 Days to New Vigor and Health"
+		],
+		name: "Fantastic Spaghetti Sauce",
+		tags: ["Dinner, Spaghetti, Pasta"],
+		image:"./images/spaghetti.jpg",
+		servings: "10-12",
+		prepTime: "15 minutes",
+		cookTime: "1 1/2 hours",
+		ingredients: [
+			"2 cans (28 oz.) tomatoes, slightly chopped",
+			"2 cans (29 oz.) tomato sauce",
+			"3 cups chopped onion",
+			"2 cups chopped bell pepper",
+			"5-6 cups sliced mushrooms",
+			"1 tablespoon garlic, minced",
+			"2 tablespoon white vinegar",
+			"2 tablespoons basil",
+			"2 teaspoons Mrs. Dash mixed spices and herbs"
+		],
+		note: "",
+		directions: [
+			"Combine all ingredients, except basil, in a large saucepan or skillet.",
+			"Simmer about one hour; add basil and simmer 30 minutes longer.",
+			"You can make the sauce early in the day and reheat just before serving.",
+			"15 minutes before serving, drop 1 pound of egg-free whole wheat or spinach spaghetti into 4 quarts of water.",
+			"Cook until tender or about 10 minutes. Serve with sauce.",
+			"Freeze leftover sauce for future use."
+		]
+	},
+	{
+		Author: [
+			"The Mormon Diet by Earl F. Updike",
+			"A Word of Wisdom",
+			"14 Days to New Vigor and Health"
+		],
+		name: "Spice Cake",
+		tags: ["Dessert, Cake"],
+		image:"./images/spicecake.jpg",
+		servings: "9-16",
+		prepTime: "",
+		cookTime: "30-45 minutes",
+		ingredients: [
+			"1/2 cup brown sugar",
+			"1 cup whole wheat flour",
+			"1 cup white flour",
+		"1/4 teaspoon baking soda",
+		"3 teaspoons baking powder",
+		"1 teaspoon cinnamon",
+		"1/4 teaspoon cloves",
+		"1/2 teaspoon nutmeg",
+		"1/2 cup applesauce (unsweetened)",
+		"1 cup raisins",
+		"1/2 cup chopped dates (optional)",
+		"3 teaspoons egg replacer or 2 egg whites"
+		],
+		note: "",
+		directions: [
+			"Mix all ingredients together.",
+			"Bake in 8 x 8 non-stick pan at 350* for 30 - 45 minutes, or until a toothpick comes out clean.",
+			"You can make the sauce early in the day and reheat just before serving.",
+			"15 minutes before serving, drop 1 pound of egg-free whole wheat or spinach spaghetti into 4 quarts of water.",
+			"Cook until tender or about 10 minutes. Serve with sauce.",
+			"Freeze leftover sauce for future use."
+		]
+	},
+	{
+			Author: [
+				"Virta",
+				"",
+				""
+			],
+			name: "Holiday Chocolate Mousse",
+			tags: ["Dessert, Mousse"],
+			image:"./images/holidaychocmousse.jpg",
+			servings: "1",
+			prepTime: "3 min",
+			cookTime: "none",
+			ingredients: [
+				"1/2 cup plain, whole-milk Greek Yogurt",
+				"1 tablespoon Organic Cacao Powder",
+				"2 teaspoons water",
+				"3-4 raspberries (optional)",
+				"sliced strawberry (optional)",
+				"1 oz chopped pecans or other nuts (optional)"
+				
+			],
+			note: "",
+			directions: [
+				"Add yogurt, cacao powder, and water into a small bowl.",
+				"Stir to combine.",
+				"Add topping of your choice and enjoy!"
+				
+			]
+		},
+		 {
+		Author: [
+			"Virta"
+		],
+		name: "Broccoli Cheddar Soup",
+		tags: ["Lunch, Dinner, Soup"],
+		image:"./images/broccolicheddarsoup.jpg",
+		servings: "12",
+		prepTime: "15 minutes",
+		cookTime: "30 minutes",
+		ingredients: [
+			"3 heads Broccoli steamed and cut into florets (about 6 cups)",
+			"8 oz cream cheese",
+			"2 teaspoons water",
+			"4 teaspoons chicken bouillon or vegetable bouillon",
+			"16 oz shredded cheddar cheese",
+			"1 tsp xanthan gum",
+			"pepper to taste",
+			"bacon crumbles (optional)",
+			"",
+			"",
+			"",
+			""
+		],
+		note: "",
+		directions: [
+			"Combine half of the steamed broccoli, cream cheese, heavy cream, and 1/2 cup of water into a food processor or blender; process until smooth.",
+			"Transfer mixture into large pot.",
+			"Whisk in bouillon, pepper(to taste), and 1 cup water.",
+			"Slowly add in xanthan gum and whisk.",
+			"Bring to a boil, then simmer for 5 minutes.",
+			"Stir in cheddar cheese.",
+			"Gently stir in remaining broccoli florets.",
+			"Let rest 5-10 minutes, then garnish with bacon crumbles (optional)."
+ 		]
+ 	},
+	{
+		Author: [
+			"Lisaann Sobieralski"
+		],
+		name: "Deviled Eggs",
+		tags: ["Lunch, Dinner, Breakfast"],
+		image:"./images/deviledeggs.jpg",
+		servings: "12",
+		prepTime: "10 minutes",
+		cookTime: "20 minutes",
+		ingredients: [
+			"12 hard boiled eggs",
+			"1/2 cup mayonnaise",
+			"2 teaspoons white vinegar",
+			"2 teaspoons Dijon Mustard",
+			"1/8 teaspoon salt",
+			"1/2 teaspoon black pepper",
+			"paprika for garnish",
+			"diced onion",
+			"diced pickles",
+			"",
+			"",
+			""
+		],
+		note: "",
+		directions: [
+			"Peel eggs carefully under cold running water.",
+			"Dry eggs before slicing",
+			"Slice the eggs in half, remove the yolds and place in a medium sized bowl.",
+			"Place whites on a serving dish or plate",
+			"Mash yolks with a fork. Add mayo, vinegar, mustard, salt and pepper.",
+			"Mix until combined and creamy.",
+		"Spoon mixture into egg whites.",
+		"Sprinkle with truffled salt or paprika to serve."
+ 		]
+	},
+	{
+		Author: [
+			"Virta"
+		],
+		name: "Burgoo Stew",
+		tags: ["Lunch, Dinner, Stew, Soup"],
+		image:"./images/burgoostew.jpg",
+		servings: "12",
+		prepTime: "10 minutes",
+		cookTime: "8 minutes",
+		ingredients: [
+			"2 lbs beef roast",
+			"2 lbs chicken breast",
+			"2 lbs pork roast",
+			"3 cups beef broth",
+			"2 cups crushed tomatoes",
+			"1 medium onion chopped",
+			"4 stalks celery chopped",
+			"1/2 cup worcestershire sauce",
+			"2 1/2 cups turnips",
+			"1 cup okra",
+			" 1 teaspoon Garlic Powder",
+			"2 teaspoon salt",
+			"2 teaspoon pepper"
+		],
+		note: "",
+		directions: [
+			"Wash and chop all vegetables.",
+			"Add all ingredients to a slow cooker and cook on low 7-8 hours until meat is cooked through and tender.",
+			"Add extra salt and pepper if desired and enjoy!"
+			
+		]
+	},
 ];
 
 export default recipes;
 	
+	
 	// {
 	// 	Author: [
-	// 		"The Mormon Diet by Earl F. Updike",
-	// 		"A Word of Wisdom",
-	// 		"14 Days to New Vigor and Health"
+	// 		"Virta"
 	// 	],
-	// 	name: "",
-	// 	tags: [""],
-	// 	//image:
-	// 	servings: "",
-	// 	prepTime: "",
-	// 	cookTime: "",
+	// 	name: "Burgoo Stew",
+	// 	tags: ["Lunch, Dinner, Stew, Soup"],
+	// 	image:"./images/burgoostew.jpg",
+	// 	servings: "12",
+	// 	prepTime: "10 minutes",
+	// 	cookTime: "8 minutes",
 	// 	ingredients: [
-	// 		"",
-	// 		"",
-	// 		""
+	// 		"2 lbs beef roast",
+	// 		"2 lbs chicken breast",
+	// 		"2 lbs pork roast",
+	// 		"3 cups beef broth",
+	// 		"2 cups crushed tomatoes",
+	// 		"1 medium onion chopped",
+	// 		"4 stalks celery chopped",
+	// 		"1/2 cup worcestershire sauce",
+	// 		"2 1/2 cups turnips",
+	// 		"1 cup okra",
+	// 		" 1 teaspoon Garlic Powder",
+	// 		"2 teaspoon salt",
+	//		"2 teaspoon pepper"
 	// 	],
 	// 	note: "",
 	// 	directions: [
+	// 		"Wash and chop all vegetables.",
+	// 		"Add all ingredients to a slow cooker and cook on low 7-8 hours until meat is cooked through and tender.",
+	// 		"Add extra salt and pepper if desired and enjoy!",
 	// 		"",
 	// 		"",
 	// 		"",
-	// 		"",
-	// 		"",
-	// 		""
-	// 	]
-	// },
-	// {
-	// 	Author: [
-	// 		"The Mormon Diet by Earl F. Updike",
-	// 		"A Word of Wisdom",
-	// 		"14 Days to New Vigor and Health"
-	// 	],
-	// 	name: "",
-	// 	tags: [""],
-	// 	//image:
-	// 	servings: "",
-	// 	prepTime: "",
-	// 	cookTime: "",
-	// 	ingredients: [
-	// 		"",
-	// 		"",
-	// 		""
-	// 	],
-	// 	note: "",
-	// 	directions: [
-	// 		"",
-	// 		"",
-	// 		"",
-	// 		"",
-	// 		"",
-	// 		""
+	//		"",
+	//		""
 	// 	]
 	// },
 	// {
