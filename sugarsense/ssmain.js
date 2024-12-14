@@ -30,9 +30,8 @@ function recipeTemplate(recipe) {
                 <ul class="recipe__tags">
                     ${tagsTemplate(recipe.tags)}
                 </ul>
-                <h2><a href="#">${recipe.name}</a></h2>
-                <p class="recipe__ratings">
-                    ${ratingTemplate(recipe.rating)}
+                <a href="#">${recipe.name}</a>
+                
                 </p>
                 <p class="recipe__description">
                     ${recipe.description}
@@ -118,9 +117,6 @@ function init() {
 
 // Call init to start the app
 document.addEventListener("DOMContentLoaded", init);
-
-
-
 emailjs.init('P4eZxcICiUBIgMWUu');
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {

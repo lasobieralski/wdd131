@@ -1,7 +1,13 @@
 /*share recipe form*/
 /* Basic Form Styles */
+body {
+    background-color: rgb(193, 228, 240);
+}
+
 p {
     text-align: center;
+    font-weight: bold;
+    font-size: 20px;
 }
 #share-form {
     max-width: 600px;
@@ -9,6 +15,7 @@ p {
     font-family: 'Arial', sans-serif;
     background: #f9f9f9;
     padding: 20px;
+    border: 3px solid var(--primary-color);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -39,11 +46,11 @@ textarea {
 }
   
 button {
-    background: #5ba5ae;
+    background: var(--primary-color);
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    border: none;
+    border: 3px solid var(--primary-color);
     border-radius: 4px;
     padding: 10px 15px;
     cursor: pointer;

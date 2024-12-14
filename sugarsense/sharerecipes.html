@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="styles/share.css">
 
   <!--js files-->
-  <script type="module" src="ssmain.js" defer></script>
+
 </head>
 <body>
   <div class="content">
@@ -46,19 +46,17 @@
     
         <link type="text/css" rel="stylesheet" href="styles/share.css">
         <div id="feedback"></div>
-        <script src="main.js" defer></script>
-        <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        <script src="ssmain.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
         </script>
-        <script type="text/javascript">
-            (function(){
+        <script>(function(){
             emailjs.init({
             publicKey: "P4eZxcICiUBIgMWUu",
             });
         })();
         </script>
   <main>
-        <section id="sharerecipes-form">
+        <div id="sharerecipes-form">
            
             <p>We would love to feature your recipe! Please fill out the form below.</p>
             
@@ -93,9 +91,11 @@
                 <button type="submit">Share Recipe</button>
             </form>
             
-        </section>
+          </div>
         
     </main>
+      <!--js files-->
+  <script type="module" src="ssmain.js"></script>
     <footer>
         <p>SugarSense &copy; 2024 - Lisaann Sobieralski</p>
         <p><a href="site-plan.html">Site Plan</a></p>
