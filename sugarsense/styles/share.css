@@ -1,7 +1,7 @@
 /*share recipe form*/
 /* Basic Form Styles */
 body {
-    background-color: rgb(193, 228, 240);
+    background-color: var(--accent1-color);
 }
 
 p {
