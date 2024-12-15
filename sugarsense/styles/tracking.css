@@ -3,6 +3,7 @@ main {
     margin: 2rem auto;
     padding: 1rem;
     background: #fafafa;
+    border: 3px solid var(--primary-color);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     font-family: 'Roboto', sans-serif;
@@ -50,12 +51,12 @@ main {
     width: 100%;
     padding: 0.5rem;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 3px solid var(--primary-color);
   }
   
   .tracking-form button {
     padding: 0.6rem 1.2rem;
-    border: none;
+    border: 3px solid var(--primary-color);
     border-radius: 4px;
     background: #4caf50;
     color: #fff;

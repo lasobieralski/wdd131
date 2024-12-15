@@ -14,13 +14,6 @@ function getRandomListEntry(list) {
     return list[randomNum]; // Return the random entry
 }
 
-// Function to create star ratings
-// function createStars(rating) {
-//     const fullStars = '⭐'.repeat(Math.floor(rating));
-//     const emptyStars = '☆'.repeat(5 - Math.floor(rating));
-//     return fullStars + emptyStars;
-// }
-
 // Function to generate the recipe HTML template
 function recipeTemplate(recipe) {
     return `
@@ -31,12 +24,10 @@ function recipeTemplate(recipe) {
                     ${tagsTemplate(recipe.tags)}
                 </ul>
                 <a href="#">${recipe.name}</a>
-                
-                </p>
                 <p class="recipe__description">
                     ${recipe.description}
                 </p>
-			</figcaption>
+            </figcaption>
         </figure>
     `;
 }
@@ -45,18 +36,6 @@ function recipeTemplate(recipe) {
 function tagsTemplate(tags) {
     return tags.map(tag => `<li>${tag}</li>`).join('');
 }
-
-// Function to generate the ratings HTML
-// function ratingTemplate(rating) {
-//     let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
-//     for (let i = 1; i <= 5; i++) {
-//         html += i <= Math.floor(rating)
-//             ? `<span aria-hidden="true" class="icon-star">⭐</span>`
-//             : `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
-//     }
-//     html += `</span>`;
-//     return html;
-// }
 
 // Function to render recipes to the DOM
 function renderRecipes(recipeList) {
@@ -95,59 +74,91 @@ function searchHandler(event) {
     } else {
         renderRecipes(filteredRecipes);
     }
-	document.querySelector("#search-bar").value = "";
+
+    document.querySelector("#search-bar").value = ""; // Clear the search bar
+}
+
+// Function to render a random recipe
+function renderRandomRecipe() {
+    try {
+        const randomRecipe = getRandomListEntry(recipes);
+        renderRecipes([randomRecipe]);
+    } catch (error) {
+        console.error("Error generating random recipe:", error);
+        document.querySelector("#result").innerHTML = `<p>Could not load a random recipe. Please try again later.</p>`;
+    }
+}
+
+// Handle navigation button click to display random recipe
+function handleNavigationClick() {
+    const navRecipeButton = document.querySelector("#navRecipeButton"); // Ensure the button has this ID in your HTML
+
+    if (!navRecipeButton) {
+        console.error("Navigation button not found!");
+        return;
+    }
+
+    navRecipeButton.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent default link behavior if it's a link
+        renderRandomRecipe();
+    });
 }
 
 // Initialize the app and set up event listeners
 function init() {
     // Render a random recipe on page load
-    const randomRecipe = getRandomListEntry(recipes);
-    renderRecipes([randomRecipe]);
+    renderRandomRecipe();
 
     // Set up the search functionality
-    document.querySelector("form").addEventListener("submit", searchHandler);
+    const searchForm = document.querySelector("form");
+    if (searchForm) {
+        searchForm.addEventListener("submit", searchHandler);
+    }
 
     // Set up the "Generate Random Recipe" button
     const generateButton = document.querySelector("#generateButton");
-    generateButton.addEventListener("click", () => {
-        const randomRecipe = getRandomListEntry(recipes);
-        renderRecipes([randomRecipe]);
-    });
+    if (generateButton) {
+        generateButton.addEventListener("click", renderRandomRecipe);
+    }
+
+    // Set up the navigation button to render a random recipe
+    handleNavigationClick();
 }
 
 // Call init to start the app
 document.addEventListener("DOMContentLoaded", init);
+
+// EmailJS for contact form
 emailjs.init('P4eZxcICiUBIgMWUu');
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission
-    
-    const form = this; // Reference to the form
-    //console.log("Form is being submitted...");
-    //console.log("Public Key: P4eZxcICiUBIgMWUu");
-    //console.log("Service ID: service_nsgsir4");
-    //console.log("Template ID: template_wgpem9n");
+
+    const form = this;
 
     // Send form data via EmailJS
     emailjs.sendForm('service_nsgsir4', 'template_wgpem9n', this)
         .then(function(response) {
             console.log("Email sent successfully!", response);
             alert('Message sent successfully!');
-            form.reset(); //clear the form fields
+            form.reset(); // Clear the form fields
         }, function(error) {
             console.error('Failed to send message:', error);
             alert('Failed to send message. Please try again.');
         });
 });
+
+// EmailJS for recipe share form
 document.getElementById('share-form').addEventListener('submit', function(event) {
     event.preventDefault();
+
     const form = this;
+
     emailjs.sendForm('service_nsgsir4', 'template_jt9uk7g', this)
         .then(function() {
             alert('Recipe submitted for approval!');
-            form.reset(); //clear the form fields
+            form.reset(); // Clear the form fields
         }, function(error) {
             console.error('Failed to submit recipe:', error);
         });
 });
-
