@@ -2,7 +2,7 @@
 #contact-form-section {
   padding: 20px;
   max-width: 600px;
-  margin: 40px auto;
+  margin: auto;
   background: #f9f9f9;
   border: 3px solid var(--primary-color);
   border-radius: 10px;
@@ -28,6 +28,7 @@
 }
 
 #contact-form-section label {
+  
   margin-bottom: 5px;
   font-weight: 600;
   align-self: flex-start; /* Ensures labels are aligned to the left */

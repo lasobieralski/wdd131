@@ -10,7 +10,12 @@
     --third-font: Arial, Helvetica, sans-serif;
     --fourth-font:"Roboto";
 }
-  
+h1 {
+    font-family: 'Amatic SC';
+    font-size: 3rem;
+    color: var(--primary-color); /* Customize as needed */
+    margin: 0;
+  }  
 /* Universal Styles */
 body {
     font-family: var(--primary-font);
