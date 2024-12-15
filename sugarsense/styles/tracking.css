@@ -74,16 +74,18 @@ main {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.95rem;
+    margin-right: 10px;
   }
   
   table thead {
     background: #f4f4f4;
   }
   
-  table th, table td {
+  table th {
     padding: 0.8rem;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    margin-right: 10px;
   }
   
   table th {
@@ -110,7 +112,9 @@ main {
   }
   
   .chart-container {
-    margin: 3rem 0;
+    margin: 0;
+    
+    border-radius: 8px;
   }
   
   .chart-controls {
@@ -136,6 +140,7 @@ main {
     flex: 1 1 300px;
     background: #fff;
     padding: 1rem;
+    border: 3px solid var(--primary-color);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
