@@ -515,6 +515,40 @@ const recipes = [
 			
 		]
 	},
+	{
+		Author: [
+			"Tasty Freedom 2 Cookbook recipe created by Laurie Lundgren"
+		],
+		name: "Banana Bread",
+		tags: ["Breakfast, Lunch, Bread"],
+		image:"./images/banana_bread.jpg",
+		servings: "4",
+		prepTime: "10 minutes",
+		cookTime: "33-35 minutes",
+		ingredients: [
+			"24 oz bananas, over-ripe, mashed (approx. 6-7 bananas)",
+			"1 teaspoon dehydreated orange peel (optional)",
+			"4 eggs",
+			"2 teaspoons vanilla extract",
+			"4 oz peanut butter, no added sugar (or 4 oz walnuts crushed/chopped)",
+			"4 oz oats, old fashioned or quick oats, uncooked",
+			"1/2 teaspoon salt",
+			"1 teaspoon baking powder",
+			"1 teaspoon baking soda",
+			"1 1/4 teasponns cinnamon"
+		],
+		note: "Enjoy cold, room temperature, or warmed up!",
+		directions: [
+			"Pre-heat oven to 350°.",
+			"Use 4 small casserole dishes as shown in picture (approx. 5 in. x 7.5 in.). Coaat dish with butter-flavored non-stick cooking spray. Or use 6 in. round cake pans. (I do not recommend using mini loaf pans as they are too deep for the batter to cook thoroughly.)",
+			"In a large mixing bowl, mash the bananas with a potato masher. Add dehydrated orange peel, eggs, and vanilla extract. Stir. Add peanut butter (or nuts). Stir until thoroughly combined.",
+			"In a smaller separate bowl, combine dry ingredients: oats, salt, baking powder, backing sods, and cinnamon. Stir. Add this mixture of dry ingredients to the contents of the first large mixing bowl. Stir to forom a batter.",
+			"Equally distribute the batter among 4 casserole dishes by scooping only one ladleful per casserole dish at a time. Repeat until all batter is equally distributed into the four casserole dishes.",
+			"Bake (all four at once) at 350° for 33-35 minutes. Let cool.",
+			"Tip: For best texture and taste, refrigerate for at least 1 hour or overnight before serving. Cover and store in the refrigerator for up to 5 days.",
+			"Freezing Tip: to freeze, store in quart-sized Ziploc freezer bags. For a quick and easy breakfast, thaw overnight in the refrigerator or out on the kitchen counter."
+		]
+	},
 ];
 
 export default recipes;
@@ -522,39 +556,36 @@ export default recipes;
 	
 	// {
 	// 	Author: [
-	// 		"Virta"
+	// 		"Tasty Freedom 2 Cookbook recipe created by Laurie Lundgren"
 	// 	],
-	// 	name: "Burgoo Stew",
-	// 	tags: ["Lunch, Dinner, Stew, Soup"],
-	// 	image:"./images/burgoostew.jpg",
-	// 	servings: "12",
+	// 	name: "Banana Bread",
+	// 	tags: ["Breakfast, Lunch, Bread"],
+	// 	image:"./images/banana_bread.jpg",
+	// 	servings: "4",
 	// 	prepTime: "10 minutes",
-	// 	cookTime: "8 minutes",
+	// 	cookTime: "33-35 minutes",
 	// 	ingredients: [
-	// 		"2 lbs beef roast",
-	// 		"2 lbs chicken breast",
-	// 		"2 lbs pork roast",
-	// 		"3 cups beef broth",
-	// 		"2 cups crushed tomatoes",
-	// 		"1 medium onion chopped",
-	// 		"4 stalks celery chopped",
-	// 		"1/2 cup worcestershire sauce",
-	// 		"2 1/2 cups turnips",
-	// 		"1 cup okra",
-	// 		" 1 teaspoon Garlic Powder",
-	// 		"2 teaspoon salt",
-	//		"2 teaspoon pepper"
+	// 		"24 oz bananas, over-ripe, mashed (approx. 6-7 bananas)",
+	// 		"1 teaspoon dehydreated orange peel (optional)",
+	// 		"4 eggs",
+	// 		"2 teaspoons vanilla extract",
+	// 		"4 oz peanut butter, no added sugar (or 4 oz walnuts crushed/chopped)",
+	// 		"4 oz oats, old fashioned or quick oats, uncooked",
+	// 		"1/2 teaspoon salt",
+	// 		"1 teaspoon baking powder",
+	// 		"1 teaspoon baking soda",
+	// 		"1 1/4 teasponns cinnamon"
 	// 	],
-	// 	note: "",
+	// 	note: "Enjoy cold, room temperature, or warmed up!",
 	// 	directions: [
-	// 		"Wash and chop all vegetables.",
-	// 		"Add all ingredients to a slow cooker and cook on low 7-8 hours until meat is cooked through and tender.",
-	// 		"Add extra salt and pepper if desired and enjoy!",
-	// 		"",
-	// 		"",
-	// 		"",
-	//		"",
-	//		""
+	// 		"Pre-heat oven to 350°.",
+	// 		"Use 4 small casserole dishes as shown in picture (approx. 5" x 7.5"). Coaat dish with butter-flavored non-stick cooking spray. Or use 6" round cake pans. (I do not recommend using mini loaf pans as they are too deep for the batter to cook thoroughly.)",
+	// 		"In a large mixxing bowl, mash the bananas with a potato masher. Add dehydrated orange peel, eggs, and vanilla extract. Stir. Add peanut butter (or nuts). Stir until thoroughly combined.",
+	// 		"In a smaller separate bowl, combine dry ingredients: oats, salt, baking powder, backing sods, and cinnamon. Stir. Add this mixture of dry ingredients to the contents of the first large mixing bowl. Stir to forom a batter.",
+	// 		"Equally distribute the batter among 4 casserole dishes by scooping only one ladleful per casserole dish at a time. Repeat until all batter is equally distributed into the four casserole dishes.",
+	// 		"Bake (all four at once) at 350° for 33-35 minutes. Let cool.",
+	//		"Tip: For best texture and taste, refrigerate for at least 1 hour or overnight before serving. Cover and store in the refrigerator for up to 5 days.",
+	//		"Freezing Tip: to freeze, store in quart-sized Ziploc freezer bags. For a quick and easy breakfast, thaw overnight in the refrigerator or out on the kitchen counter."
 	// 	]
 	// },
 	// {
