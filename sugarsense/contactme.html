@@ -56,23 +56,36 @@
             
                 <button type="submit">Send Message</button>
             </form>
+            <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
             <script>
-              emailjs.init('YOUR_API_KEY');
-          
-              document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-          
-                emailjs.sendForm('service_id', 'template_id', this)
-                  .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Message Sent Successfully!');
-                  }, function(error) {
-                    console.error('FAILED...', error);
-                    alert('Failed to send message. Please try again.');
-                  });
+              (function(){
+                emailjs.init("P4eZxcICiUBIgMWUu"); // Your actual public key
+              })();
+            </script>
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                emailjs.init("P4eZxcICiUBIgMWUu"); // Ensure this is your public key
+            
+                document.getElementById('contact-form').addEventListener('submit', function (event) {
+                  event.preventDefault(); // Prevent default form submission
+            
+                  emailjs.sendForm('service_nsgsir4', 'template_wgpem9n', this)
+                    .then(function (response) {
+                      console.log("Email sent successfully!", response);
+                      alert('Message sent successfully!');
+                      document.getElementById('contact-form').reset(); // Clear the form
+                    })
+                    .catch(function (error) {
+                      console.error('Failed to send message:', error);
+                      alert('Failed to send message. Please try again.');
+                    });
+                });
               });
             </script>
-        </section>
+            
+          
+              
+      </section>
     </main>
     <footer>
         <p>SugarSense &copy; 2024 - Lisaann Sobieralski</p>
