@@ -2,10 +2,10 @@ main {
     max-width: 1160px;
     margin: 2rem auto;
     padding: 1rem;
-    background: #fafafa;
+    background: white;
     border: 3px solid var(--primary-color);
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px var(--accent1-color);
     font-family: 'Roboto', sans-serif;
   }
   
@@ -58,16 +58,16 @@ main {
     padding: 0.6rem 1.2rem;
     border: 3px solid var(--primary-color);
     border-radius: 4px;
-    background: #4caf50;
-    color: #fff;
+    background: var(--accent1-color);
+    color: var(--primary-color);
     cursor: pointer;
-    font-weight: 600;
+    font-weight: bolder;
     margin-top: 1.8rem;
     flex-shrink: 0;
   }
   
   .tracking-form button:hover {
-    background: #45a049;
+    background:yellow;
   }
   
   table {
@@ -78,13 +78,15 @@ main {
   }
   
   table thead {
-    background: #f4f4f4;
+    background: var(--accent1-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 4px;
   }
   
   table th {
     padding: 0.8rem;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--primary-color);
     margin-right: 10px;
   }
   
@@ -95,7 +97,7 @@ main {
   .no-entries {
     text-align: center;
     font-style: italic;
-    color: #999;
+    color: var(--primary-color);
   }
   
   .delete-btn {
@@ -186,9 +188,10 @@ main {
   }
   
   .blog-container a {
-    color: #4caf50;
+    color: var(--primary-color);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bolder;
+    background-color: var(--accent1-color);
   }
   
   .blog-container a:hover {
